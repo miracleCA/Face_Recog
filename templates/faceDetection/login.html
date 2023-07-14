@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+        }
+        button:hover {
+            background-color: rgb(221, 141, 141);
+            color: blue;
+        }
+    </style>
+
+    <span>
+        <p>Hello dear, please do login to test my Facial recognition system</p>
+        <a href="{% url 'login' %}">
+            <button>Login</button>
+        </a>
+    </span>
+</body>
+</html>

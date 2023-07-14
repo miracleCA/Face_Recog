@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <style>
+        form {
+            width: 30%;
+            margin: auto;
+            padding-top: 1%;
+        }
+        h3 {
+            text-align: center;
+            justify-content: center;
+            font-family: Aladin;
+            font-size: 35px;
+        }
+        form label {
+            font-weight: 100px;
+            font-size: 20px;
+            font-family: Aladin;
+        }
+        form input {
+            height: 30px;
+            font-family: Aladin;
+            font-size: 20px;
+            width: -webkit-fill-available;
+        }
+        #click {
+            display: flex;
+            justify-content: space-between;
+        }
+        #register {
+            background-color: blue;
+            color: white;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+        }
+        #clear {
+            background-color: red;
+            color: white;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+        }
+        #register:hover {
+            color: blue;
+            background-color: white;
+            border: 2px solid blue;
+        }
+        #clear:hover {
+            color: red;
+            background-color: white;
+            border: 2px solid red;
+
+        }
+    </style>
+
+    <h1>Register Page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3>Facial Registration</h3>
+
+        {#<label for="fname">First name:</label>#}
+        {#<input type='text' name='fname'/>#}
+        {#<label for="lname">Last name:</label>#}
+        {#<input type='text' name='lname'/>#}
+        {#<label for="face_id">Last name:</label>#}
+        {#<input type="number" name="face_id" placeholder="Number ID">#}
+        {#<label for="email">Email:</label>#}
+        {#<input type='email' name='email'/>#}
+        {#<input type='number' name='pnumber'/>#}
+        {#<label for="dept">Department</label>#}
+        {#<input type='text' name='dept'/>#}
+        {#<label for="occup">Occupation</label>#}
+        {#<input type='text' name='occup'/>#}
+        {#<label for="job">jobation</label>#}
+        {#<input type='text' name='job'/>#}
+        {#<label for="bio">Occupation</label>#}
+        {#<textarea type='text' rows="4" cols="20" name='bio'>#}
+
+        {#<input type="file" name="dp" accept="image/*" id="">#}
+        {{ form.as_p }}
+        <span id="click">
+            <input type="submit" id="register" value="Register">
+            <input type="reset" id="clear" value="Clear">
+        </span>
+    </form>
+</body>
+</html>
